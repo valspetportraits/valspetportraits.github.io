@@ -83,30 +83,6 @@ $(document).ready(function() {
 
 
 
-function clickIE4(){
-if (event.button==2){
-alert(message);
-return false;
-}
-}
-function clickNS4(e){
-if
-(document.layers||document.getElementById&&!document.all){
-if
-(e.which==2||e.which==3){
-alert(message);
-return false;
-}
-}
-}
-if (document.layers){
-document.captureEvents(Event.MOUSEDOWN);
-document.onmousedown=clickNS4;
-}
-else if (document.all&&!document.getElementById){
-document.onmousedown=clickIE4;
-}
-document.oncontextmenu=new Function("alert(message);return false")
 
 
 
@@ -247,6 +223,21 @@ document.oncontextmenu=new Function("alert(message);return false")
     }
     
     
+    .cover {
+    position:fixed;
+    width:700px;
+    height:700px;
+    z-index: 990;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    border: solid 2px blue;
+    
+    
+    
+    }
+    
+    
     
     
     
@@ -329,17 +320,18 @@ user-select: none;
     </div>
     
     <img id="title" src="vpp.png" height="70%">
-    
+    <div class ="cover">
+    </div>
     <div class="fadein">
   <img src="pBogey.jpg" height="100%" ondragstart="return false;">
   <img src="pCee.jpg" height="100%" ondragstart="return false;">
   <img src="pDelilah.jpg" height="100%" ondragstart="return false;">
   <img src="pLilly.jpg" height="100%" ondragstart="return false;">
   <img src="pLorieSikura01.jpg" height="100%" ondragstart="return false;">
-  <img src="pBarbPitcher01.jpg" height="100%">
-  <img src="pBailey.jpg" height="100%">
-  <img src="pPVesely.jpg" height="100%">
-  <img src="pLorieSikura06.jpg" height="100%">
+  <img src="pBarbPitcher01.jpg" height="100%" ondragstart="return false;">
+  <img src="pBailey.jpg" height="100%" ondragstart="return false;">
+  <img src="pPVesely.jpg" height="100%" ondragstart="return false;">
+  <img src="pLorieSikura06.jpg" height="100%" ondragstart="return false;">
 </div>
     
     
